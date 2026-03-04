@@ -8,7 +8,7 @@ def test_take_damage():
 def test_heal_increases_health():
     player = {"health": 80, "max_health": 100, "alive": True}
     result = heal(player, 20)
-    assert result["health"] == 80
+    assert result["health"] == 100
 
 def test_is_alive_returns_true_when_healthy():
     player = {"health": 100, "max_health": 100, "alive": True}
