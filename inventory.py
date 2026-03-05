@@ -1,8 +1,11 @@
 def add_item(inventory, item):
-    pass
+    inventory.append(item)
+    return inventory
 
 def remove_item(inventory, item):
-    pass
+    if item in inventory:
+        inventory.remove(item)
+    return inventory
 
 def get_item_count(inventory):
-    pass
+    return len(inventory)
