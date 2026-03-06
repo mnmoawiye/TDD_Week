@@ -1,5 +1,5 @@
 import pytest
-# Default scope — runs before every test (safe for mutable objects like dicts)
+
 
 @pytest.fixture
 def player():
@@ -8,7 +8,7 @@ def player():
 
 @pytest.fixture(scope="module")
 def game_config():
-    return {"max_level": 50, "starting_health": 100}   # read-only config
+    return {"max_level": 50, "starting_health": 100}  
 
 
 @pytest.fixture
@@ -27,3 +27,8 @@ def full_inventory():
 @pytest.fixture
 def locked_inventory():
     return {"items": ["sword"], "capacity": 10, "locked": True}
+import pytest
+
+@pytest.fixture
+def partially_filled_inventory():
+    return {"items": ["potion", "sword"], "capacity": 10, "locked": False}
