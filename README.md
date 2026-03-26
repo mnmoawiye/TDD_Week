@@ -1,1 +1,1 @@
-# TDD_Week
+[![Run Tests](https://github.com/mnmoawiye/TDD_Week/actions/workflows/tests.yml/badge.svg)](https://github.com/mnmoawiye/TDD_Week/actions/workflows/tests.yml)
