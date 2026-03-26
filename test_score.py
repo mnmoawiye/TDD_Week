@@ -1,5 +1,5 @@
 import pytest
-from score import *
+from score import add_points, apply_multiplier, reset_score, is_high_score
 
 
 # add_points
@@ -13,7 +13,6 @@ def test_add_points_basic(game):
 def test_add_points_negative_raises_error(game):
     with pytest.raises(ValueError):
         add_points(game, -5)
-
 
 
 # apply_multiplier
@@ -48,16 +47,14 @@ def test_reset_score_when_inactive(game):
     assert result["multiplier"] == 1
 
 
-
 # is_high_score
 
 
 def test_is_high_score_true(game):
     add_points(game, 50)
-    assert is_high_score(game, 10) == True
+    assert is_high_score(game, 10)
 
 
 def test_is_high_score_invalid_threshold(game):
     with pytest.raises(ValueError):
         is_high_score(game, -1)
-

@@ -1,6 +1,6 @@
 def add_item(inventory, item):
     if inventory["locked"]:
-        return inventory  
+        return inventory
     if not isinstance(item, str) or item == "":
         raise ValueError("Item must be a non-empty string")
     if len(inventory["items"]) >= inventory["capacity"]:
